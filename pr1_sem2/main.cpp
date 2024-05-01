@@ -2,7 +2,7 @@
 #include <vector>
 #include "Record.hpp"
 
-#define SIZE 3
+#define SIZE 10
 
 Record InputRecord() 
 {
@@ -25,7 +25,7 @@ std::string RemoveStrInput() {
 int main() {
 	std::vector<Record> Table;
 
-	for (int i = 0; i < 2; i++) {
+	for (int i = 0; i < SIZE; i++) {
 		Record r = InputRecord();
 		Table.push_back(r);
 	}
@@ -33,7 +33,7 @@ int main() {
 	std::string rem_str;
 	rem_str = RemoveStrInput();
 
-	for (int i = 0; i < 2; i++) {
+	for (int i = 0; i < SIZE; i++) {
 		
 		if (Table[i].cpu == rem_str) {
 			Table.erase(Table.begin() + i);
